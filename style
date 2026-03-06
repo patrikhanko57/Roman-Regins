@@ -1,0 +1,263 @@
+<style>
+
+/* GOOGLE FONT (more premium look) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Orbitron', sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, rgba(255,0,0,0.2), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(255,0,0,0.15), transparent 40%);
+z-index:-1;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:40px;
+background:linear-gradient(180deg,#000,#111);
+border-bottom:2px solid red;
+box-shadow:0 0 40px rgba(255,0,0,0.4);
+}
+
+header h1{
+font-size:60px;
+color:red;
+letter-spacing:4px;
+text-shadow:
+0 0 10px red,
+0 0 30px red,
+0 0 60px red;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+background:#0c0c0c;
+border-bottom:1px solid #222;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:red;
+left:0;
+bottom:-5px;
+transition:0.4s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+url("hero-image.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.hero h2{
+font-size:90px;
+color:red;
+text-shadow:
+0 0 20px red,
+0 0 40px red,
+0 0 80px red;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+color:#bbb;
+}
+
+/* BUTTON */
+
+.hero button{
+margin-top:35px;
+padding:16px 35px;
+font-size:18px;
+border:none;
+border-radius:6px;
+background:linear-gradient(45deg,#ff0000,#700000);
+color:white;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 20px red;
+}
+
+.hero button:hover{
+transform:scale(1.08);
+box-shadow:0 0 40px red;
+}
+
+/* SECTIONS */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:100px 30px;
+}
+
+h2{
+font-size:40px;
+color:red;
+margin-bottom:30px;
+text-shadow:0 0 10px red;
+}
+
+/* GLASS CARDS */
+
+.card{
+background:rgba(20,20,20,0.7);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:10px;
+border:1px solid rgba(255,0,0,0.3);
+box-shadow:0 0 30px rgba(255,0,0,0.25);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 60px red;
+}
+
+/* VIDEO */
+
+.video-container{
+display:flex;
+justify-content:center;
+}
+
+.video-container iframe{
+width:85%;
+height:500px;
+border-radius:10px;
+border:2px solid red;
+box-shadow:
+0 0 30px red,
+0 0 60px rgba(255,0,0,0.5);
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:3px solid red;
+padding-left:40px;
+}
+
+.timeline-item{
+margin-bottom:50px;
+position:relative;
+}
+
+.timeline-item::before{
+content:"";
+position:absolute;
+left:-44px;
+top:8px;
+width:18px;
+height:18px;
+background:red;
+border-radius:50%;
+box-shadow:0 0 20px red;
+}
+
+/* BLOODLINE GRID */
+
+.bloodline{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.member{
+padding:30px;
+text-align:center;
+background:#111;
+border-radius:10px;
+border:1px solid red;
+transition:0.3s;
+}
+
+.member:hover{
+transform:scale(1.07);
+box-shadow:0 0 40px red;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.achieve{
+padding:30px;
+text-align:center;
+background:#111;
+border-top:3px solid red;
+border-radius:8px;
+transition:0.3s;
+}
+
+.achieve:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px red;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+border-top:2px solid red;
+margin-top:80px;
+}
+
+</style>
